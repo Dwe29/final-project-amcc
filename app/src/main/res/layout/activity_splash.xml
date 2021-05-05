@@ -12,7 +12,7 @@
         android:id="@+id/image_splash"
         android:layout_width="228dp"
         android:layout_height="228dp"
-        android:src="@drawable/ayamv1"
+        android:src="@drawable/splash_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -19,9 +19,9 @@ class ProdukAyambroilerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_produk_ayambroiler)
 
         val assets = listOf(
-            R.drawable.photo_one,
-            R.drawable.photo_two,
-            R.drawable.photo_three
+            R.drawable.ayambroiler01,
+            R.drawable.ayambroiler02,
+            R.drawable.ayambroiler03
         )
 
         createSlider(assets)

@@ -44,9 +44,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         val assets = listOf(
-            R.drawable.photo_one,
-            R.drawable.photo_two,
-            R.drawable.photo_three
+            R.drawable.ayamkampung01,
+            R.drawable.ayambroiler03,
+            R.drawable.ayampetelur02,
+            R.drawable.ayamkub03
         )
 
         createSlider(assets)

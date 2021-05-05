@@ -52,6 +52,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="per ekor"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/price"
         app:layout_constraintTop_toBottomOf="@+id/image_header" />

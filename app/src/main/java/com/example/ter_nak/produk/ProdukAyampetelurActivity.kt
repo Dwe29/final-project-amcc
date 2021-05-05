@@ -20,9 +20,9 @@ class ProdukAyampetelurActivity : AppCompatActivity() {
         setContentView(R.layout.activity_produk_ayampetelur)
 
         val assets = listOf(
-            R.drawable.photo_one,
-            R.drawable.photo_two,
-            R.drawable.photo_three
+            R.drawable.ayampetelur01,
+            R.drawable.ayampetelur02,
+            R.drawable.ayampetelur03
         )
 
         createSlider(assets)
