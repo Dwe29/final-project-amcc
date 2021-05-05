@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ter-nak</string>
+    <string name="ayam_kampung">Ayam Kampung</string>
+    <string name="ayam_broiler">Ayam Broiler</string>
+    <string name="ayam_petelur">Ayam Petelur</string>
+    <string name="ayam_kub">Ayam KUB</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+</resources>
