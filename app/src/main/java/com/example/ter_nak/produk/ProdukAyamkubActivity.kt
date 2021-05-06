@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.ter_nak.R
 import com.example.ter_nak.SliderAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_produk_ayamkub.*
 import java.util.*
 
 class ProdukAyamkubActivity : AppCompatActivity() {
@@ -27,18 +28,18 @@ class ProdukAyamkubActivity : AppCompatActivity() {
     }
 
     private fun createSlider(string: List<Int>) {
-        vpSlider.adapter = SliderAdapter(this, string)
-        indicator.setViewPager(vpSlider)
+        vpSliderKub.adapter = SliderAdapter(this, string)
+        indicatorKub.setViewPager(vpSliderKub)
         val density = resources.displayMetrics.density
         //Set Circle indicator radius
-        indicator.radius = 5 * density
+        indicatorKub.radius = 5 * density
         numPages = string.size
         // Auto getData of viewpager
         val update = Runnable {
             if (currentPage === numPages) {
                 currentPage = 0
             }
-            vpSlider.setCurrentItem(currentPage++, true)
+            vpSliderKub.setCurrentItem(currentPage++, true)
         }
         val swipeTimer = Timer()
         swipeTimer.schedule(object : TimerTask() {
@@ -47,7 +48,7 @@ class ProdukAyamkubActivity : AppCompatActivity() {
             }
         }, 5000, 5000)
         // Pager listener over indicator
-        indicator.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        indicatorKub.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {
                 currentPage = position
             }
