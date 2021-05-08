@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/ic_android" />
+                    android:background="@mipmap/ic_kampung" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/ic_android" />
+                    android:background="@mipmap/ic_broiler" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/ic_android" />
+                    android:background="@mipmap/ic_petelur" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,7 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/ic_android" />
+                    android:background="@mipmap/ic_kub" />
 
                 <TextView
                     android:layout_width="wrap_content"

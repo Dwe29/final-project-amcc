@@ -1,5 +1,7 @@
 package com.example.ter_nak.produk
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -26,6 +28,16 @@ class ProdukAyambroilerActivity : AppCompatActivity() {
         )
 
         createSlider(assets)
+
+        // send
+        val number = "6282271222110"
+        val url: String = "https://api.whatsapp.com/send?phone=" + number
+        beliBroiler.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setPackage("com.whatsapp")
+            intent.setData(Uri.parse(url))
+            startActivity(intent)
+        }
     }
 
     private fun createSlider(string: List<Int>) {
@@ -35,19 +47,6 @@ class ProdukAyambroilerActivity : AppCompatActivity() {
         //Set Circle indicator radius
         indicatorBroiler.radius = 5 * density
         numPages = string.size
-        // Auto getData of viewpager
-        val update = Runnable {
-            if (currentPage === numPages) {
-                currentPage = 0
-            }
-            vpSliderBroiler.setCurrentItem(currentPage++, true)
-        }
-        val swipeTimer = Timer()
-        swipeTimer.schedule(object : TimerTask() {
-            override fun run() {
-                Handler(Looper.getMainLooper()).post(update)
-            }
-        }, 5000, 5000)
         // Pager listener over indicator
         indicatorBroiler.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {

@@ -47,6 +47,10 @@ dependencies {
     // sliders
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    // circle img
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:percent:28.0.0'
+
 
 
 

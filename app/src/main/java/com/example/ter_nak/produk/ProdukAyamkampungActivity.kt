@@ -1,15 +1,14 @@
 package com.example.ter_nak.produk
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.viewpager.widget.ViewPager
 import com.example.ter_nak.R
 import com.example.ter_nak.SliderAdapter
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
 import kotlinx.android.synthetic.main.activity_produk_ayamkampung.*
-import java.util.*
 
 class ProdukAyamkampungActivity : AppCompatActivity() {
 
@@ -27,6 +26,16 @@ class ProdukAyamkampungActivity : AppCompatActivity() {
         )
 
         createSlider(assets)
+
+        // send
+        val number = "6282271222110"
+        val url: String = "https://api.whatsapp.com/send?phone=" + number
+        beliKampung.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setPackage("com.whatsapp")
+            intent.setData(Uri.parse(url))
+            startActivity(intent)
+        }
     }
 
     private fun createSlider(string: List<Int>) {
@@ -36,19 +45,6 @@ class ProdukAyamkampungActivity : AppCompatActivity() {
         //Set Circle indicator radius
         indicatorKampung.radius = 5 * density
         numPages = string.size
-        // Auto getData of viewpager
-        val update = Runnable {
-            if (currentPage === numPages) {
-                currentPage = 0
-            }
-            vpSliderKampung.setCurrentItem(currentPage++, true)
-        }
-        val swipeTimer = Timer()
-        swipeTimer.schedule(object : TimerTask() {
-            override fun run() {
-                Handler(Looper.getMainLooper()).post(update)
-            }
-        }, 5000, 5000)
         // Pager listener over indicator
         indicatorKampung.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {

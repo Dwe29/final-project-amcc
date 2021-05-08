@@ -17,6 +17,7 @@ import com.example.ter_nak.produk.ProdukAyamkampungActivity
 import com.example.ter_nak.produk.ProdukAyamkubActivity
 import com.example.ter_nak.produk.ProdukAyampetelurActivity
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
 import java.util.*
 
 class HomeActivity : Fragment() {
@@ -67,13 +68,26 @@ class HomeActivity : Fragment() {
         createSlider(assets)
     }
 
-    private fun createSlider(string: List<Int>) {
-        vpSlider.adapter = SliderAdapter(activity!!, string)
+    private fun createSlider(String: List<Int>) {
+        vpSlider.adapter = SliderAdapter(activity!!, String)
         indicator.setViewPager(vpSlider)
         val density = resources.displayMetrics.density
         //Set Circle indicator radius
         indicator.radius = 5 * density
-        numPages = string.size
+        numPages = String.size
+//        // Auto getData of viewpager
+//        val update = Runnable {
+//            if (currentPage == numPages) {
+//                currentPage = 0
+//            }
+//            vpSliderBroiler.setCurrentItem(currentPage++, true)
+//        }
+//        val swipeTimer = Timer()
+//        swipeTimer.schedule(object : TimerTask() {
+//            override fun run() {
+//                Handler(Looper.getMainLooper()).post(update)
+//            }
+//        }, 5000, 5000)
         // Pager listener over indicator
         indicator.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {
