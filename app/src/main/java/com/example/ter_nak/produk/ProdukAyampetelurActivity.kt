@@ -32,7 +32,7 @@ class ProdukAyampetelurActivity : AppCompatActivity() {
         createSlider(assets)
 
         // send
-        val number = "6282271222110"
+        val number = "6281247571525"
         val url: String = "https://api.whatsapp.com/send?phone=" + number
         beliPetelur.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
