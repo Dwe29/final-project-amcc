@@ -35,7 +35,7 @@ class ProdukAyambroilerActivity : AppCompatActivity() {
         beliBroiler.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setPackage("com.whatsapp")
-            intent.setData(Uri.parse(url))
+            intent.data = Uri.parse(url)
             startActivity(intent)
         }
     }

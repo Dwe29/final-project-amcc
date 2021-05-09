@@ -1,8 +1,6 @@
 package com.example.ter_nak
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
