@@ -12,8 +12,12 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         val pref = getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
+        val username = pref.getString("USERNAME", "")
+        val password = pref.getString("PASSWORD", "")
+
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            if (username.isNullOrEmpty() || password.isNullOrEmpty()) startActivity(Intent(this, LoginActivity::class.java))
+            else startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 3000)
     }

@@ -1,5 +1,6 @@
 package com.example.ter_nak
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -26,12 +27,16 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(forYouActivity)
 
         bottom_navigation.setOnNavigationItemSelectedListener {
+            val pref = getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
+            val username = pref.getString("USERNAME","")
+            val password = pref.getString("PASSWORD", "")
             when (it.itemId) {
                 R.id.ic_beranda -> replaceFragment(forYouActivity)
                 R.id.ic_home -> replaceFragment(homeActivity)
                 R.id.ic_profile -> replaceFragment(profileActivity)
             }
             true
+
         }
 
     }
