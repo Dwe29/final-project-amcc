@@ -23,12 +23,12 @@
             android:src="@drawable/img_beranda" />
 
         <TextView
+            android:id="@+id/textImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="25dp"
-            android:text="Hai, Dwi !"
             android:textColor="@color/white"
             android:textSize="29sp" />
 
