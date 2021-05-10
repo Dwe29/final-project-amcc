@@ -1,10 +1,7 @@
 package com.example.ter_nak.fragment
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +13,7 @@ import com.example.ter_nak.produk.ProdukAyambroilerActivity
 import com.example.ter_nak.produk.ProdukAyamkampungActivity
 import com.example.ter_nak.produk.ProdukAyamkubActivity
 import com.example.ter_nak.produk.ProdukAyampetelurActivity
-import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
 import java.util.*
 
@@ -30,7 +27,7 @@ class HomeActivity : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.activity_dashboard, container, false)
+        return inflater.inflate(R.layout.activity_home, container, false)
     }
 
 

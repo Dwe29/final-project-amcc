@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_beranda"
+        android:icon="@mipmap/ic_beranda_foreground"
+        android:title="For You"/>
     <item
         android:id="@+id/ic_home"
         android:icon="@drawable/ic_home"

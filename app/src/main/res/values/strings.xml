@@ -6,4 +6,12 @@
     <string name="ayam_kub">Ayam KUB</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
+    <string name="daftar">Daftar</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="beranda">Beranda</string>
+    <string name="for_you">For You</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="gaperlu_ribet">Beli ayam gaperlu ribet ?</string>
+    <string name="tau_ngga_sih">Tau ngga sih, perkembangan ilmu teknologi saat ini telah meningkat pesar. Dari yang harus jauh-jauh pergi ke depan gang buat beli cilok, sekarang tinggal pake aplikasi aja. Begitu juga jika kamu pengen beli daging ayam segar berkualitas tanpa perlu repot-repot pergi ke</string>
+    <string name="selamat_datang">Selamat Datang</string>
 </resources>
