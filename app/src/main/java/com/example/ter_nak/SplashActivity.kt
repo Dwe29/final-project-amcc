@@ -16,8 +16,9 @@ class SplashActivity : AppCompatActivity() {
         val password = pref.getString("PASSWORD", "")
 
         Handler().postDelayed({
-            if (username.isNullOrEmpty() || password.isNullOrEmpty()) startActivity(Intent(this, LoginActivity::class.java))
-            else startActivity(Intent(this, MainActivity::class.java))
+//            if (username.isNullOrEmpty() || password.isNullOrEmpty()) startActivity(Intent(this, LoginActivity::class.java))
+//            else
+                startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 3000)
     }

@@ -1,5 +1,6 @@
 package com.example.ter_nak.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,11 +20,16 @@ class ForYouActivity : Fragment() {
         return inflater.inflate(R.layout.activity_for_you, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val pref = this.activity!!.getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
         val username = pref.getString("USERNAME", "")
 
-        textImage.text = "$username!!"
+        if (username.isNullOrEmpty()) {
+            textImage.text = "Hai!!"
+        } else {
+            textImage.text = "Hai, $username!!"
+        }
     }
 }

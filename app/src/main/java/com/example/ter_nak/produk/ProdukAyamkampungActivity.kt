@@ -1,10 +1,14 @@
 package com.example.ter_nak.produk
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
+import com.example.ter_nak.LoginActivity
 import com.example.ter_nak.R
 import com.example.ter_nak.SliderAdapter
 import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
@@ -14,6 +18,7 @@ class ProdukAyamkampungActivity : AppCompatActivity() {
 
     private var currentPage = 0
     private var numPages = 0
+    private val loginActivity = LoginActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +32,26 @@ class ProdukAyamkampungActivity : AppCompatActivity() {
 
         createSlider(assets)
 
-        // send
-        val number = "6281247571525"
-        val url: String = "https://api.whatsapp.com/send?phone=" + number
-        beliKampung.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.setPackage("com.whatsapp")
-            intent.data = Uri.parse(url)
-            startActivity(intent)
+        val pref = getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
+        val username = pref.getString("USERNAME", "")
+        val password = pref.getString("PASSWORD", "")
+        if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
+            beliKampung.setOnClickListener {
+                Toast.makeText(this,
+                    "Silahkan Login Terlebih Dahulu Untuk Membeli",
+                    Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, loginActivity::class.java))
+            }
+        } else {
+            // Move to WhatsApp
+            val number = "6281247571525"
+            val url: String = "https://api.whatsapp.com/send?phone=" + number
+            beliKampung.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setPackage("com.whatsapp")
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
         }
     }
 
