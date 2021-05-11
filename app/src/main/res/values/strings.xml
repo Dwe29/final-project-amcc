@@ -14,4 +14,8 @@
     <string name="gaperlu_ribet">Beli ayam gaperlu ribet ?</string>
     <string name="tau_ngga_sih">Tau ngga sih, perkembangan ilmu teknologi saat ini telah meningkat pesar. Dari yang harus jauh-jauh pergi ke depan gang buat beli cilok, sekarang tinggal pake aplikasi aja. Begitu juga jika kamu pengen beli daging ayam segar berkualitas tanpa perlu repot-repot pergi ke</string>
     <string name="selamat_datang">Selamat Datang</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">LogOut</string>
 </resources>

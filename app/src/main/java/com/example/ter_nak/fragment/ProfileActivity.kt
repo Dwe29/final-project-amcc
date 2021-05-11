@@ -27,8 +27,8 @@ class ProfileActivity : Fragment() {
         val username = pref.getString("USERNAME", "")
         val password = pref.getString("PASSWORD", "")
 
-        usernameProfile.text = username
-        passwordProfile.text = password
+        usernameProfile.setText(username)
+        passwordProfile.setText(password)
 
         btnLogout.setOnClickListener {
             val editor = pref.edit()
