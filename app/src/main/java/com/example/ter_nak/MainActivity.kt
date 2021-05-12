@@ -40,7 +40,9 @@ class MainActivity : AppCompatActivity() {
                     R.id.ic_beranda -> replaceFragment(forYouActivity)
                     R.id.ic_home -> replaceFragment(homeActivity)
                     R.id.ic_profile -> {
-                        Toast.makeText(this, "Anda Belom Login Silahkan Login terlebih dahulu", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this,
+                            "Anda Belom Login Silahkan Login terlebih dahulu",
+                            Toast.LENGTH_LONG).show()
                         startActivity(Intent(this, loginActivity::class.java))
                     }
                 }
@@ -51,9 +53,7 @@ class MainActivity : AppCompatActivity() {
                 when (it.itemId) {
                     R.id.ic_beranda -> replaceFragment(forYouActivity)
                     R.id.ic_home -> replaceFragment(homeActivity)
-                    R.id.ic_profile -> {
-                        replaceFragment(profileActivity)
-                    }
+                    R.id.ic_profile -> replaceFragment(profileActivity)
                 }
                 true
             }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.ter_nak.LoginActivity
+import com.example.ter_nak.MainActivity
 import com.example.ter_nak.R
 import kotlinx.android.synthetic.main.activity_profile.*
 
@@ -34,7 +35,7 @@ class ProfileActivity : Fragment() {
             val editor = pref.edit()
             editor.clear()
             editor.apply()
-            val intent = Intent(activity!!, LoginActivity::class.java)
+            val intent = Intent(activity!!, MainActivity::class.java)
             startActivity(intent)
         }
 
