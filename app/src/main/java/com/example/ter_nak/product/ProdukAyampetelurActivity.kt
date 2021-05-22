@@ -1,21 +1,17 @@
-package com.example.ter_nak.produk
+package com.example.ter_nak.product
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
-import com.example.ter_nak.LoginActivity
+import com.example.ter_nak.activity.LoginActivity
 import com.example.ter_nak.R
-import com.example.ter_nak.SliderAdapter
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
+import com.example.ter_nak.activity.SliderAdapter
+import com.example.ter_nak.description.DescriptionAyampetelurActivity
 import kotlinx.android.synthetic.main.activity_produk_ayampetelur.*
-import java.util.*
 
 class ProdukAyampetelurActivity : AppCompatActivity() {
 
@@ -38,6 +34,8 @@ class ProdukAyampetelurActivity : AppCompatActivity() {
         val pref = getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
         val username = pref.getString("USERNAME", "")
         val password = pref.getString("PASSWORD", "")
+
+        // when click beli
         if (username.isNullOrEmpty() || password.isNullOrEmpty()) {
             beliPetelur.setOnClickListener {
                 Toast.makeText(this,
@@ -55,6 +53,11 @@ class ProdukAyampetelurActivity : AppCompatActivity() {
                 intent.data = Uri.parse(url)
                 startActivity(intent)
             }
+        }
+
+        // when click deskripsi
+        descPetelur.setOnClickListener{
+            startActivity(Intent(this, DescriptionAyampetelurActivity::class.java))
         }
     }
 

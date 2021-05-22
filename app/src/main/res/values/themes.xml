@@ -15,6 +15,7 @@
 
         <!-- Background edit text -->
         <item name="colorAccent">@color/red</item>
+        <item name="colorControlNormal">@color/white</item>
 
     </style>
 

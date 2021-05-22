@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".produk.ProdukAyamkampungActivity">
+    tools:context=".product.ProdukAyamkampungActivity">
 
     <LinearLayout
         android:id="@+id/image_header"
@@ -110,6 +110,7 @@
             android:layout_centerHorizontal="true" />
 
         <Button
+            android:id="@+id/descKampung"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/view"

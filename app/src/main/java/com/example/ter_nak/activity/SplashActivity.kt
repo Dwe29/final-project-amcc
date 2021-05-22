@@ -1,11 +1,11 @@
-package com.example.ter_nak
+package com.example.ter_nak.activity
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ter_nak.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

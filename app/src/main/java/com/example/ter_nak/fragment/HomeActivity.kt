@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.example.ter_nak.R
-import com.example.ter_nak.SliderAdapter
-import com.example.ter_nak.produk.ProdukAyambroilerActivity
-import com.example.ter_nak.produk.ProdukAyamkampungActivity
-import com.example.ter_nak.produk.ProdukAyamkubActivity
-import com.example.ter_nak.produk.ProdukAyampetelurActivity
+import com.example.ter_nak.activity.SliderAdapter
+import com.example.ter_nak.product.ProdukAyambroilerActivity
+import com.example.ter_nak.product.ProdukAyamkampungActivity
+import com.example.ter_nak.product.ProdukAyamkubActivity
+import com.example.ter_nak.product.ProdukAyampetelurActivity
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_produk_ayambroiler.*
-import java.util.*
 
 class HomeActivity : Fragment() {
 

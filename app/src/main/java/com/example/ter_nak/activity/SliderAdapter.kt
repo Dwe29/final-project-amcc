@@ -1,4 +1,4 @@
-package com.example.ter_nak
+package com.example.ter_nak.activity
 
 import android.content.Context
 import android.os.Parcelable
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
+import com.example.ter_nak.R
 import com.squareup.picasso.Picasso
 
 class SliderAdapter(private val context: Context,
